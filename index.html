@@ -83,19 +83,16 @@
           <p>BridgeAPI.dev's goal is to provide an intuitive tool to receive, filter, and forward API requests to connect incompatible RESTful APIs and automate workflows. Current options for developers usually require subscribing to bloated services and granting intrusive permissions to connect apps. With BridgeAPI, simply define your desired workflow and direct your vendor webhooks or API calls towards your provided BridgeAPI endpoint.</p>
           <p></p>
         </div>
-      </article>
-      <div class="player-wrapper">
-        <div id="player"></div>
-      </div>      
+      </article>    
     </section>
 
     <section class="light" id="other-projects">
       <article>
         <div class="box first">
           <h4>// Other projects</h4>
-          <h2>SpaceCraft: <br class="mobile"/>Proxy Server</h2>
+          <h2>Bates Ecommerce</h2>
           <img class="full" src="images/demo-2.gif" />          
-          <p>I built a reverse proxy server from scratch using Node.js and Docker API which integrates with <a href="https://spacecraft-repl.com" target="_blank">SpaceCraft</a>. The proxy server manages multiple user sessions, initializes containers and forwards clients' requests to the appropriate containers.</p>
+          <p>I built an Ecommerce platform written in Node and with React, Redux, Express, PostgreSQL, and Amazon Web Services. Allows merchants to create a personal store & provides an interface for Stripe's onboarding process. Merchants are easily able to list and manage their store's products for sale, as well as perform basic administrative abilities. Start getting paid today!</p>
 
           <a href="https://spacecraft-repl.com/whitepaper" target="_blank">
             <button>Read more</button>
@@ -129,11 +126,6 @@
         <p>
           I am a full-stack engineer with experience in client-server state synchronization, container-based deployment, and DevOps. I have years of experience with Ruby and JavaScript and proficient in WebSockets, Docker, Ruby on Rails, React and SQL.
         </p>
-
-        <p>
-          Fun fact: I can solve a Rubik's Cube in <a href="https://youtu.be/T-27imipklY?t=84" target="_blank"> 30 seconds</a>.
-        </p>
-
         <a href="/resume/angelruizbates.pdf" target="_blank">
           <button>Resume</button>
         </a>
@@ -155,41 +147,5 @@
       </div>
     </article>
   </footer>  
-
-  <script>
-    const $ = (element) => document.querySelector(element);
-    const tag = document.createElement('script');
-
-    tag.src = "https://www.youtube.com/iframe_api";
-    const firstScriptTag = $('script');
-    firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
-
-    let player = null;
-
-    function onYouTubeIframeAPIReady() {
-      player = new YT.Player('player', {
-        height: '100%',
-        width: '100%',
-        videoId: 'Dehmu9QpLTg',
-        events: {
-          'onReady': onPlayerReady,
-          'onStateChange': onPlayerStateChange
-        }
-      });
-    }
-
-    function onPlayerReady(event) { } 
-    // needs to be defined in global scope
-
-    function onPlayerStateChange(event) {
-      const state = YT.PlayerState;
-      // if ([state.UNSTARTED, state.PLAYING].includes(event.data)) {
-      //   $('#presentation article').classList.add('hidden');
-      // }
-      // if (event.data === state.PAUSED) {
-      //   $('#presentation article').classList.remove('hidden');
-      // }
-    }
-  </script>
 </body>
 </html>
